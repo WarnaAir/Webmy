@@ -1,28 +1,62 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Form dengan Border</title>
     <style type="text/css">
-        p.dotted { border: 2px dotted black; padding: 10px; }
-        p.dashed { border: 2px dashed black; padding: 10px; }
-        p.solid  { border: 2px solid black; padding: 10px; }
-        p.double { border: 4px double black; padding: 10px; }
-        p.groove { border: 4px groove black; padding: 10px; }
-        p.ridge  { border: 4px ridge black; padding: 10px; }
-        p.inset  { border: 4px inset black; padding: 10px; }
-        p.outset { border: 4px outset black; padding: 10px; }
+        form {
+            border: 3px dashed black; /* Garis putus-putus */
+            padding: 20px;
+            width: 50%;
+            margin: auto;
+            background-color: #f9f9f9;
+        }
     </style>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-
-<h3>Form dengan Border Solid</h3>
-
-<p class="solid">
-    <form method="POST" action="">
-        Nama: <input type="text" name="nama"><br><br>
-        Email: <input type="email" name="email"><br><br>
-        <input type="submit" value="Kirim">
+    <h2><marquee>Free Registration</marquee></h2>
+    <form action="proses.php" method="post" name="form">
+        <table width="68%" border="0" align="center" cellpadding="0">
+            <tr>
+                <td class="td" width="15%">Nama</td>
+                <td width="2%">:</td>
+                <td width="83%">
+                    <input name="txtNama" type="text" id="txtNama">
+                </td>
+            </tr>
+            <tr>
+                <td class="td">Tgl Lahir</td>
+                <td>:</td>
+                <td>
+                    <input name="txtTgl" type="text" id="txtTgl" size="4" maxlength="2"> /
+                    <input name="txtBulan" type="text" id="txtBulan" size="4" maxlength="2"> /
+                    <input name="txtTahun" type="text" id="txtTahun" size="8" maxlength="4">
+                </td>
+            </tr>
+            <tr>
+                <td class="td">Alamat</td>
+                <td>:</td>
+                <td>
+                    <textarea name="txtAlamat" cols="40" rows="2" id="txtAlamat"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td class="td">Kota</td>
+                <td>:</td>
+                <td>
+                    <input name="txtKota" type="text" id="txtKota">
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>
+                    <input name="btnKirim" type="submit" id="btnKirim" value="Kirim">
+                    <input name="btnCancel" type="reset" id="btnCancel" value="Cancel">
+                </td>
+            </tr>
+        </table>
     </form>
-</p>
-
 </body>
 </html>
